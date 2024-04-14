@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ProviderProject;
 using ProviderProject.Db;
 
 var builder = WebApplication.CreateBuilder(args);
