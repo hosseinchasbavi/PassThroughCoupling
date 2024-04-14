@@ -1,1 +1,4 @@
 /ClientProject/bin/
+/ClientProject/obj/
+/.vs/
+/.idea/
