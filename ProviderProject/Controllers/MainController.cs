@@ -8,22 +8,15 @@ namespace ProviderProject.Controllers;
 [ApiController]
 public class MainController : ControllerBase
 {
+    public event RequestSavesEventHandler? RequestSaves;
     private readonly MyContext _dbContext;
     private const string UserHeaderName = "X-Offline-Context";
-    private readonly RabbitMqConfig _rabbitMqConfig;
-    private readonly RabbitmqSyncWriter _rabbitWriter;
 
-    public MainController(MyContext dbContext, IConfiguration configuration)
+    public MainController(MyContext dbContext, IPushHandler pushHandler)
     {
         _dbContext = dbContext;
 
-        _rabbitMqConfig = new RabbitMqConfig();
-        configuration.GetSection("RabbitMqConfig").Bind(_rabbitMqConfig);
-
-        var topologyMaker = new TopologyMaker(_rabbitMqConfig);
-        topologyMaker.Make();
-
-        _rabbitWriter = new RabbitmqSyncWriter(_rabbitMqConfig);
+        RequestSaves += pushHandler.SendPush;
     }
 
     [HttpGet]
@@ -38,8 +31,12 @@ public class MainController : ControllerBase
             return Problem();
         }
 
-        _rabbitWriter.SendByRoutingKey(context, UserHeaderName, context);
-
+        OnRequestSaves();
         return Ok();
+    }
+
+    protected virtual void OnRequestSaves()
+    {
+        RequestSaves?.Invoke(EventArgs.Empty);
     }
 }
