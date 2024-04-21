@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using ProviderProject.Db;
 using ProviderProject.Entities;
@@ -23,8 +24,12 @@ public class MainController : ControllerBase
     public async Task<IActionResult> GetDataAsync()
     {
         var context = Request.Headers[UserHeaderName].FirstOrDefault();
+        
+        var deserializedDictionary = JsonSerializer.Deserialize<Dictionary<string, string>>(context);
+        
         await _dbContext.Request.AddAsync(new Request(context));
-        var result = _dbContext.SaveChanges();
+        
+        var result = await _dbContext.SaveChangesAsync();
 
         if (result == 0)
         {

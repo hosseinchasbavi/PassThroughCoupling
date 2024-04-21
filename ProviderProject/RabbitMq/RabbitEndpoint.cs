@@ -1,4 +1,4 @@
-namespace ProviderProject;
+namespace ProviderProject.RabbitMq;
 
 public class RabbitEndpoint
 {

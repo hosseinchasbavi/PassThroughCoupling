@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ProviderProject;
 using ProviderProject.Db;
+using ProviderProject.RabbitMq;
 
 var builder = WebApplication.CreateBuilder(args);
 

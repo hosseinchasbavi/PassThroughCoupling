@@ -15,6 +15,6 @@ public class MyContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Request>().Property(p => p.Id).IsRequired().UseIdentityColumn();
-        modelBuilder.Entity<Request>().Property(p => p.Context).IsRequired().HasMaxLength(50);
+        modelBuilder.Entity<Request>().Property(p => p.Context).IsRequired().HasMaxLength(500);
     }
 }

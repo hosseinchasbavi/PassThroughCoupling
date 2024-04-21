@@ -1,6 +1,6 @@
 using ProviderProject.Db;
 
-namespace ProviderProject;
+namespace ProviderProject.RabbitMq;
 
 public class PushHandler : IPushHandler
 {
@@ -27,6 +27,6 @@ public class PushHandler : IPushHandler
 
         if (request == null) throw new NullReferenceException($"No Request Found");
 
-        _rabbitWriter.SendByRoutingKey(request.Context, UserHeaderName, request.Context);
+        _rabbitWriter.SendByRoutingKey(request.ToString(), UserHeaderName, request.Context);
     }
 }

@@ -1,6 +1,6 @@
 using RabbitMQ.Client;
 
-namespace ProviderProject;
+namespace ProviderProject.RabbitMq;
 
 public class TopologyMaker
 {
@@ -24,10 +24,10 @@ public class TopologyMaker
             .ToList();
 
         _connection = connectionFactory.CreateConnection(endpoints);
-        AppDomain.CurrentDomain.ProcessExit += Dispose;
+        AppDomain.CurrentDomain.ProcessExit += DisposeConnection;
     }
 
-    void Dispose(object sender, EventArgs e)
+    private void DisposeConnection(object sender, EventArgs e)
     {
         _connection.Dispose();
     }

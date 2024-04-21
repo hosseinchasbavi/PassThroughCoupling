@@ -1,7 +1,7 @@
 using System.Text;
 using RabbitMQ.Client;
 
-namespace ProviderProject;
+namespace ProviderProject.RabbitMq;
 
 public class RabbitmqSyncWriter
 {
