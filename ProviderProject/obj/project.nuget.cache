@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ql7/6X4djyspEkL71pPsxxvcK/dfLM4VSOr3INaHLLjbNrwuLGPF1mh8PeoHPuD7sknp1v//SMVAcPOcFnLZUg==",
+  "dgSpecHash": "HcTkyjLscR/XQu7RSqxwJjnSOthX2HcBjRlgkOYE5DIFYS0YDDsYYjtAy7OwXfLshVBpRM2OLJMBRAs038klPA==",
   "success": true,
   "projectFilePath": "E:\\ASA\\PassThroughCoupling\\ProviderProject\\ProviderProject.csproj",
   "expectedPackageFiles": [
@@ -72,7 +72,11 @@
     "C:\\Users\\h.chasbavi\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\h.chasbavi\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\h.chasbavi\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\h.chasbavi\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\h.chasbavi\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\h.chasbavi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\h.chasbavi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\h.chasbavi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.20\\microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\h.chasbavi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.20\\microsoft.netcore.app.host.win-x64.6.0.20.nupkg.sha512"
   ],
   "logs": []
 }

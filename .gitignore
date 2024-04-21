@@ -1,4 +1,6 @@
 /ClientProject/bin/
 /ClientProject/obj/
+/ProviderProject/obj/
+/ProviderProject/bin/
 /.vs/
 /.idea/
